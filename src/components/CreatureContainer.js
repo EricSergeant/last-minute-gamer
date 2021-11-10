@@ -1,6 +1,6 @@
 import React from 'react';
 import CreatureCard from './CreatureCard';
-// import '../styles/CreatureContainer.css';
+import '../styles/CreatureContainer.css';
 
 const CreatureContainer = ({ creatureData }) => {
   console.log('creature data', creatureData)

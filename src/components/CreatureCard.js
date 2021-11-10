@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../styles/CreatureCard.css';
+import '../styles/CreatureCard.css';
 
 const CreatureCard = ({ index, name, url, key }) => {
   return (

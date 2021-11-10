@@ -17,10 +17,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // API is not dynamic, only pulling CR5 for now
     fetchCrFive()
       .then(data =>
         this.setState({
-          // API is not dynamic, only pulling CR5 for now
           creatures: data.results
         })
       )
