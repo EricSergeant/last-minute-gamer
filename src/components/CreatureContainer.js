@@ -18,6 +18,7 @@ const CreatureContainer = ({ creatureData }) => {
 
   return (
     <div className="CreatureContainer">
+      <h3>These are your CR 5 creatures:</h3>
       {cardInfo}
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import CreatureContainer from './CreatureContainer';
+import Main from './Main';
 
 import { fetchCrFive } from '../ApiCalls.js';
 
@@ -44,6 +45,10 @@ class App extends Component {
           {console.log('in render:', this.state.creatures)} */}
           <Switch>
             <Route exact path="/" render={() =>
+              <Main />
+            }
+            />
+            <Route exact path="/CR5" render={() =>
               <CreatureContainer
                 creatureData={this.state.creatures}
               />
