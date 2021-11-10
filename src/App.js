@@ -1,25 +1,58 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
+import { fetchCrFive } from './ApiCalls.js';
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      creatures: [],
+      hasError: false
+    }
+  }
+
+  componentDidMount() {
+    fetchCrFive()
+      .then(data =>
+        this.setState({
+          // creatures: data.name
+          creatures: data.results
+        })
+      )
+      .catch(error => {
+        console.log('Error getting creature:', error)
+        this.setState({
+          hasError: true
+        })
+      })
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Found this:</h2>
+        {/* <p>{this.state.creatures}</p> */}
+        {console.log('in render:', this.state.creatures)}
+      </div>
+    )
+  }
+}
+
+/*
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
     </div>
   );
 }
+*/
 
 export default App;
