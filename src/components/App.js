@@ -20,7 +20,7 @@ class App extends Component {
     fetchCrFive()
       .then(data =>
         this.setState({
-          // creatures: data.name
+          // API is not dynamic, only pulling CR5 for now
           creatures: data.results
         })
       )
@@ -48,6 +48,7 @@ class App extends Component {
               <Main />
             }
             />
+            {/* this is still using hardcoded info below */}
             <Route exact path="/CR5" render={() =>
               <CreatureContainer
                 creatureData={this.state.creatures}
