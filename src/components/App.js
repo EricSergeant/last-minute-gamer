@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import CreatureContainer from './CreatureContainer';
 
 import { fetchCrFive } from '../ApiCalls.js';
+
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -17,7 +20,7 @@ class App extends Component {
       .then(data =>
         this.setState({
           // creatures: data.name
-          creatures: data.results[1].name
+          creatures: data.results
         })
       )
       .catch(error => {
@@ -36,10 +39,17 @@ class App extends Component {
         </header>
         <main className="app-main">
           {this.state.hasError && <h2>This was an error summoning a creature from the server, please try again.</h2>}
-          <h2>Found this:</h2>
+          {/* <h2>Found this:</h2>
           <p>{this.state.creatures}</p>
-          {console.log('in render:', this.state.creatures)}
-
+          {console.log('in render:', this.state.creatures)} */}
+          <Switch>
+            <Route exact path="/" render={() =>
+              <CreatureContainer
+                creatureData={this.state.creatures}
+              />
+            }
+            />
+          </Switch>
         </main>
       </div>
     )
