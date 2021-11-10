@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../styles/App.css';
 
-import { fetchCrFive } from './ApiCalls.js';
+import { fetchCrFive } from '../ApiCalls.js';
 
 class App extends Component {
   constructor() {
@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <div>
         <h2>Found this:</h2>
-        {/* <p>{this.state.creatures}</p> */}
+        {/* <p>{this.state.creatures.name}</p> */}
         {console.log('in render:', this.state.creatures)}
       </div>
     )
