@@ -7,7 +7,7 @@ export const fetchCrFive = () => {
 };
 
 export const fetchCR = (selection) => {
-  return fetch(`https://www.dnd5eapi.co/api//monsters?challenge_rating=${selection}`)
+  return fetch(`https://www.dnd5eapi.co/api/monsters?challenge_rating=${selection}`)
     .then(response => {
       if (response.status >= 500) {
         console.log('fetch error one:\n response status >=500')
