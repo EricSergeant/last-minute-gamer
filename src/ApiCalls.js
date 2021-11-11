@@ -2,7 +2,7 @@
 
 export const fetchCrFive = () => {
   // return fetch("https://www.dnd5eapi.co/api/monsters/barbed-devil")
-  return fetch("https://www.dnd5eapi.co/api//monsters?challenge_rating=5")
+  return fetch("https://www.dnd5eapi.co/api//monsters?challenge_rating=1,2")
     .then(results => results.json())
 };
 

@@ -3,6 +3,7 @@ import '../styles/App.css';
 import CreatureContainer from './CreatureContainer';
 import Main from './Main';
 import NavBar from './NavBar';
+import Error from './Error';
 
 import { fetchCrFive, fetchCR } from '../ApiCalls.js';
 
@@ -47,8 +48,7 @@ class App extends Component {
           {/* <h2>Found this:</h2>
           <p>{this.state.creatures}</p>
           {console.log('in render:', this.state.creatures)} */}
-          <Router>
-
+          <switch>
             <Route exact path="/" render={() =>
               <div>
                 <Main />
@@ -59,8 +59,11 @@ class App extends Component {
             <Route path="/creatures" render={() =>
               <CreatureContainer creatureData={this.state.creatures} />}
             />
-            {/* <Route component={Error} /> */}
-          </Router>
+            <Route path='/error' render={() =>
+              <Error />}
+            />
+
+          </switch>
         </main>
       </div>
     )

@@ -6,7 +6,6 @@ const CreatureContainer = ({ creatureData }) => {
   console.log('creature data', creatureData)
   const cardInfo = creatureData.map(creature => {
     return (
-      // <p>I'm in creature data: {creature.name}</p>
       <CreatureCard
         index={creature.index}
         name={creature.name}
@@ -18,7 +17,7 @@ const CreatureContainer = ({ creatureData }) => {
 
   return (
     <div className="CreatureContainer">
-      <h3>These are your CR 5 creatures:</h3>
+      <h3>These are your CR 1 and CR 2 creatures:</h3>
       {cardInfo}
     </div>
   );
