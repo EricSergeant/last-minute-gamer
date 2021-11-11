@@ -7,6 +7,7 @@ const NavBar = ({ fetchCR }) => {
   return (
     <div className="nav">
       <p> nav bar goes here</p>
+      <button>CR5</button>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 
 import { fetchCrFive, fetchCR } from '../ApiCalls.js';
 
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -16,6 +16,7 @@ class App extends Component {
       hasError: false
     }
   }
+
 
   componentDidMount() {
     // API is not dynamic, only pulling CR5 for now
@@ -33,6 +34,7 @@ class App extends Component {
       })
   }
 
+
   render() {
     return (
       <div className="app">
@@ -45,21 +47,22 @@ class App extends Component {
           {/* <h2>Found this:</h2>
           <p>{this.state.creatures}</p>
           {console.log('in render:', this.state.creatures)} */}
-          <Switch>
+          <Router>
+
             <Route exact path="/" render={() =>
               <div>
-                <Main fetchCR={fetchCR()} />
+                <Main />
               </div>
             }
             />
             {/* this is still using hardcoded info below */}
-            <Route exact path="/CR5" render={() =>
+            <Route exact path="/creatures" render={() =>
               <CreatureContainer
                 creatureData={this.state.creatures}
               />
             }
             />
-          </Switch>
+          </Router>
         </main>
       </div>
     )
