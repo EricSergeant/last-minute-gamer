@@ -8,7 +8,9 @@ const NavBar = ({ fetchCR }) => {
     <div className="nav">
       <p> nav bar goes here</p>
       <NavLink to='/'>Home</NavLink>
-      <NavLink to='/creatures'>CR1 & CR2</NavLink>
+      <NavLink to='/creatures/allCR'>allCRs</NavLink>
+      <NavLink to='/creatures/CR1'>CR1</NavLink>
+      <NavLink to='/creatures/CR2'>CR2</NavLink>
     </div>
   )
 }

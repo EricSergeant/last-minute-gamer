@@ -57,7 +57,7 @@ class App extends Component {
             />
             {/* this is still using hardcoded info below */}
             <Route path="/creatures" render={() =>
-              <CreatureContainer creatureData={this.state.creatures} />}
+              < CreatureContainer creatureData={this.state.creatures} />}
             />
             <Route path='/error' render={() =>
               <Error />}

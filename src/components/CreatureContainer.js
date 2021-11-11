@@ -17,7 +17,7 @@ const CreatureContainer = ({ creatureData }) => {
 
   return (
     <div className="CreatureContainer">
-      <h3>These are your CR 1 and CR 2 creatures:</h3>
+      <h3>These are your CR 1 creatures:</h3>
       {cardInfo}
     </div>
   );
