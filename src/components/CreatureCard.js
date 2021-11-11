@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/CreatureCard.css';
 
-const CreatureCard = ({ index, name, url, key }) => {
+const CreatureCard = ({ index, name, url }) => {
   return (
     <p>Creature Card name: {name} <br></br>
     index: {index} <br></br>

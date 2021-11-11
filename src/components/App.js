@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import CreatureContainer from './CreatureContainer';
 import Main from './Main';
+import NavBar from './NavBar';
 
-import { fetchCrFive } from '../ApiCalls.js';
+import { fetchCrFive, fetchCR } from '../ApiCalls.js';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -45,7 +46,10 @@ class App extends Component {
           {console.log('in render:', this.state.creatures)} */}
           <Switch>
             <Route exact path="/" render={() =>
-              <Main />
+              <div>
+                <NavBar />
+                <Main fetchCR={fetchCR()} />
+              </div>
             }
             />
             {/* this is still using hardcoded info below */}

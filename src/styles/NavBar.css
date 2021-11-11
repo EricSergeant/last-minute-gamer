@@ -1,0 +1,19 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  /* display: none; */
+  left: 0;
+  padding-top: 4px;
+  /* position: absolute; */
+  top: 100%;
+  background-color: green;
+  z-index: 9999;
+  height: 200px;
+  width: 200px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
