@@ -56,12 +56,10 @@ class App extends Component {
             }
             />
             {/* this is still using hardcoded info below */}
-            <Route exact path="/creatures" render={() =>
-              <CreatureContainer
-                creatureData={this.state.creatures}
-              />
-            }
+            <Route path="/creatures" render={() =>
+              <CreatureContainer creatureData={this.state.creatures} />}
             />
+            {/* <Route component={Error} /> */}
           </Router>
         </main>
       </div>
