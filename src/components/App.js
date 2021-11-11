@@ -38,6 +38,7 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
           <h1 className="page-title">Find A Monster</h1>
+          <NavBar />
         </header>
         <main className="app-main">
           {this.state.hasError && <h2>This was an error summoning a creature from the server, please try again.</h2>}
@@ -47,7 +48,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() =>
               <div>
-                <NavBar />
                 <Main fetchCR={fetchCR()} />
               </div>
             }

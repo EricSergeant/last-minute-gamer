@@ -5,7 +5,9 @@ import { fetchCR } from '../ApiCalls';
 
 const NavBar = ({ fetchCR }) => {
   return (
-    <p> nav bar goes here</p>
+    <div className="nav">
+      <p> nav bar goes here</p>
+    </div>
   )
 }
 
