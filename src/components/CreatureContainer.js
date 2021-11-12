@@ -14,7 +14,7 @@ class CreatureContainer extends Component {
   }
 
   componentDidMount() {
-    fetchCR(1)
+    fetchCR(3)
       // fetchCrFive()
       .then(data => {
         if (data === undefined) {

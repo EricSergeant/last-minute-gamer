@@ -6,7 +6,6 @@ import { fetchCR } from '../ApiCalls';
 const NavBar = ({ fetchCR }) => {
   return (
     <div className="nav">
-      <p> nav bar goes here</p>
       <NavLink to='/'>Home</NavLink>
       <NavLink to='/creatures/allCR'>allCRs</NavLink>
       <NavLink to='/creatures/CR1'>CR1</NavLink>
