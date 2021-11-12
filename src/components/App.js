@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Switch } from 'react';
 import '../styles/App.css';
 import CreatureContainer from './CreatureContainer';
 import Main from './Main';
@@ -49,29 +49,51 @@ const App = () => {
         {/* <h2>Found this:</h2>
           <p>{this.state.creatures}</p>
           {console.log('in render:', this.state.creatures)} */}
-        <switch>
-          <Route exact path="/" render={() =>
-            <div>
-              <Main />
-            </div>
-          }
-          />
-          {/* this is still using hardcoded info below */}
-          <Route exact path="/creatures/CR1" render={() =>
+        {/* <Switch> */}
+        <Route exact path="/" render={() =>
+          <div>
+            <Main />
+          </div>
+        }
+        />
+
+        {/* <Route exact path="/creatures/CR1" render={() =>
             < CreatureContainer />}
           />
           <Route exact path="/creatures/CR2" render={() =>
-            < CreatureContainer fetchCR={fetchCR(2)} />}
+            < CreatureContainer />}
           />
-          {/* <Route exact path="/creatures/:CR" render={({ match }) =>
-              < CreatureContainer CR={match.params} />}
-            /> */}
+          <Route exact path="/creatures/CR3" render={() =>
+            < CreatureContainer fetchCR={fetchCR(3)} />}
+          /> */}
+        <Route exact path="/creatures/:CR" render={(routeProps) => {
+          console.log('routeProps', routeProps);
+          return (
+            < CreatureContainer creatureNumber={routeProps.match.params.CR} />
+          )
+        }
+        }
+        />
 
-          <Route path='/error' render={() =>
+        <Route exact path="/creatures/:CR/details" render={(routeProps) => {
+          console.log('routeProps', routeProps);
+
+        }
+        }
+        />
+
+        <Route path='/error' render={() =>
+          <Error />}
+        />
+
+
+        {/* 
+          The code below works but flashes error on each page load:
+          <Route path="*" render={() =>
             <Error />}
-          />
+          /> */}
 
-        </switch>
+        {/* </Switch> */}
       </main>
     </div>
   )

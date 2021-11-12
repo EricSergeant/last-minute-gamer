@@ -5,8 +5,8 @@ import '../styles/CreatureContainer.css';
 import { fetchCR, fetchCrFive } from '../ApiCalls';
 
 class CreatureContainer extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       creaturesByCR: [],
       hasError: false
@@ -14,7 +14,8 @@ class CreatureContainer extends Component {
   }
 
   componentDidMount() {
-    fetchCR(3)
+    console.log('component did mount');
+    fetchCR(this.props.creatureNumber)
       // fetchCrFive()
       .then(data => {
         if (data === undefined) {
@@ -30,6 +31,29 @@ class CreatureContainer extends Component {
       .catch(error => {
         console.log('Error in creature container:', error);
       })
+  }
+
+  componentDidUpdate(previousProps) {
+    // console.log('component did update');
+    // console.log('previous props', previousProps);
+    // console.log('this.props', this.props);
+    if (this.props.creatureNumber !== previousProps.creatureNumber) {
+      fetchCR(this.props.creatureNumber)
+        .then(data => {
+          if (data === undefined) {
+            this.setState({
+              hasError: true
+            })
+          } else {
+            this.setState({
+              creaturesByCR: data.results
+            })
+          }
+        })
+        .catch(error => {
+          console.log('Error in creature container:', error);
+        })
+    }
   }
 
   // returnHome = () => {
