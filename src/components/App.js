@@ -1,49 +1,60 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/App.css';
+import CreatureContainer from './CreatureContainer';
+import Main from './Main';
+import NavBar from './NavBar';
+import Error from './Error';
+import { Route } from 'react-router-dom';
+// import { fetchCrFive, fetchCR } from '../ApiCalls.js';
 
-import { fetchCrFive } from '../ApiCalls.js';
+const App = () => {
+  return (
+    <div className="app">
+      <header className="app-header">
+        <h1 className="page-title">Find A Monster</h1>
+        <NavBar />
+      </header>
+      <main className="app-main">
+        {/* {this.state.hasError && <h2>This was an error summoning a creature from the server, please try again.</h2>} */}
+        {/* <Switch> */}
+        <Route exact path="/" render={() =>
+          <div>
+            <Main />
+          </div>
+        }
+        />
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      creatures: [],
-      hasError: false
-    }
-  }
+        <Route exact path="/creatures/:CR" render={(routeProps) => {
+          console.log('routeProps', routeProps);
+          return (
+            < CreatureContainer creatureNumber={routeProps.match.params.CR} />
+          )
+        }
+        }
+        />
 
-  componentDidMount() {
-    fetchCrFive()
-      .then(data =>
-        this.setState({
-          // creatures: data.name
-          creatures: data.results[1].name
-        })
-      )
-      .catch(error => {
-        console.log('Error getting creature:', error)
-        this.setState({
-          hasError: true
-        })
-      })
-  }
+        <Route exact path="/creatures/:CR/details" render={(routeProps) => {
+          console.log('routeProps', routeProps);
 
-  render() {
-    return (
-      <div className="app">
-        <header className="app-header">
-          <h1 className="page-title">Find A Monster</h1>
-        </header>
-        <main className="app-main">
-          {this.state.hasError && <h2>This was an error summoning a creature from the server, please try again.</h2>}
-          <h2>Found this:</h2>
-          <p>{this.state.creatures}</p>
-          {console.log('in render:', this.state.creatures)}
+        }
+        }
+        />
 
-        </main>
-      </div>
-    )
-  }
+        <Route path='/error' render={() =>
+          <Error />}
+        />
+
+
+        {/* 
+          The code below works but flashes error on each page load:
+          <Route path="*" render={() =>
+            <Error />}
+          /> */}
+
+        {/* </Switch> */}
+      </main>
+    </div>
+  )
 }
 
 export default App;
