@@ -14,9 +14,8 @@ class CreatureContainer extends Component {
   }
 
   componentDidMount() {
-    console.log('component did mount');
+    // console.log('component did mount');
     fetchCR(this.props.creatureNumber)
-      // fetchCrFive()
       .then(data => {
         if (data === undefined) {
           this.setState({
@@ -56,13 +55,6 @@ class CreatureContainer extends Component {
     }
   }
 
-  // returnHome = () => {
-  //   this.setState({
-  //     creaturesByCR: [],
-  //     hasError: false
-  //   })
-  // }
-
   render() {
     if (this.state.hasError) {
       return <Redirect to='/Error' />
@@ -81,33 +73,11 @@ class CreatureContainer extends Component {
     })
     return (
       <div className="CreatureContainer">
-        <h3>These are your CR 1 creatures:</h3>
+        <h3>These are your CR {this.props.creatureNumber} creatures:</h3>
         {cardInfo}
       </div>
     );
   }
 }
-/*
-const CreatureContainer = ({ creatureData }) => {
-  console.log('creature data', creatureData)
-  const cardInfo = creatureData.map(creature => {
-    return (
-      <CreatureCard
-        index={creature.index}
-        name={creature.name}
-        url={creature.url}
-        key={creature.index}
-      />
-    );
-  })
-
-  return (
-    <div className="CreatureContainer">
-      <h3>These are your CR 1 creatures:</h3>
-      {cardInfo}
-    </div>
-  );
-}
-*/
 
 export default CreatureContainer;

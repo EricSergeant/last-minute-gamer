@@ -3,7 +3,7 @@ import '../styles/NavBar.css';
 import { NavLink } from 'react-router-dom';
 // import { fetchCR } from '../ApiCalls';
 
-const NavBar = ({ fetchCR }) => {
+const NavBar = () => {
   return (
     <div className="nav">
       <NavLink to='/'>Home</NavLink>
