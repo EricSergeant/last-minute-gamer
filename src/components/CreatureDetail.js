@@ -50,18 +50,16 @@ class CreatureDetail extends Component {
       <div className="creature-detail-view">
         <h3>{creatureInfo.name}</h3>
         <h3>CR: {creatureInfo.challenge_rating}</h3>
-        <ul>
-          <li>Type: {this.state.creatureType}</li>
-          <li>Subtype: {creatureInfo.subtype ? creatureInfo.subtype : 'n/a'}</li>
-          <li>Size: {creatureInfo.size}</li>
-          <li>Alignment: {this.state.creatureAlignment}</li>
-          <li>Hit Dice: {creatureInfo.hit_dice}</li>
-          <li>Hit Points: {creatureInfo.hit_points}</li>
-          <li>AC: {creatureInfo.armor_class}</li>
-          {/* <li>Movement: {this.state.creatureMove}</li> */}
-          <li>XP: {creatureInfo.xp}</li>
-          <li>Actions: {this.state.creatureActions}</li>
-        </ul>
+        <p>Type: {this.state.creatureType}</p>
+        <p>Subtype: {creatureInfo.subtype ? creatureInfo.subtype : 'n/a'}</p>
+        <p>Size: {creatureInfo.size}</p>
+        <p>Alignment: {this.state.creatureAlignment}</p>
+        <p>Hit Dice: {creatureInfo.hit_dice}</p>
+        <p>Hit Points: {creatureInfo.hit_points}</p>
+        <p>AC: {creatureInfo.armor_class}</p>
+        {/* <p>Movement: {this.state.creatureMove}</p> */}
+        <p>XP: {creatureInfo.xp}</p>
+        <p>Actions: <br></br>{this.state.creatureActions}</p>
       </div>
     )
   }

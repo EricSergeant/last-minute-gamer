@@ -1,0 +1,23 @@
+/* * {
+  border: 1px solid #822000;
+} */
+
+h3 {
+  color: #822000;
+}
+ p {
+   color: black;
+ }
+
+ .card-display {
+  border-top: 2px solid #822000;
+ }
+
+.creature-container {
+  background-color:lightgoldenrodyellow;
+  border-bottom: 2px solid #822000;
+}
+
+.creature-detail-view {
+  background-color: lightgoldenrodyellow;
+}
