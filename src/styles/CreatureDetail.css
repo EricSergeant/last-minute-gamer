@@ -14,10 +14,22 @@ h3 {
  }
 
 .creature-container {
-  background-color:lightgoldenrodyellow;
-  border-bottom: 2px solid #822000;
+    background-color:lightgoldenrodyellow;
+    border-bottom: 2px solid #822000;
+    max-width: 70vw;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0 0 0.2rem 0.2rem #822000;
 }
 
 .creature-detail-view {
   background-color: lightgoldenrodyellow;
+  min-width: 50vw;
+  border-bottom: 2px solid #822000;
+  max-width: 70vw;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0 0 0.2rem 0.2rem #822000;
 }

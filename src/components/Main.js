@@ -3,9 +3,10 @@ import '../styles/Main.css';
 
 const Main = () => {
   return (
-    <div className='main'>
+    <div className='main-text'>
       <h3>Welcome to the monster finder!</h3>
-      <p>Please choose a Challenge Rating(CR) from the drop-dowm menu.</p>
+      <p>Running late to your D&D game? Need a last-minute encounter for your players?  Please choose a Challenge Rating(CR) from the menu above.</p>
+      <br></br>
       <br></br>
       <h4>What exactly is a CR and how do I use it?</h4>
       <p>As of the 5th edition of Dungeons and Dragons, CR is a rating system that estimates the threat level of enemies. As a rule of thumb, a party of four characters can defeat an enemy of CR equal to their level without significant trouble.</p>

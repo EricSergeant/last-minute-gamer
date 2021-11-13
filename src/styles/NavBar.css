@@ -30,3 +30,8 @@
   font-size: calc(10px + 2vmin);
   color: black;
 }
+
+.active {
+  transform: scale(1.25);
+  color: #822000;
+}

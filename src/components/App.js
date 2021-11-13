@@ -6,6 +6,7 @@ import Main from './Main';
 import NavBar from './NavBar';
 import Error from './Error';
 import Favorites from './Favorites';
+import '../styles/castle.jpg';
 import { Route } from 'react-router-dom';
 
 const App = () => {

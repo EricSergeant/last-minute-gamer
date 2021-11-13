@@ -1,23 +1,31 @@
 .app {
   text-align: center;
+  min-width: 100vw;
   /* border: 1px solid red; */
 }
 
 .app-header {
   /* background-color: #282c34; */
   background-color: lightgoldenrodyellow;
-  min-height: 10vh;
+  min-height: 7vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color:#822000;
+}
+
+h1 {
+  text-shadow: 1px 1px black;
 }
 
 .app-main {
-  background-color: rgb(252, 252, 239);
-  min-height: 90vh;
+  background: url(castle.jpg); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 93vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +34,18 @@
   color: black;
 }
 
+.main-text {
+    background-color:lightgoldenrodyellow;
+    border-bottom: 2px solid #822000;
+    max-width: 70vw;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0 0 0.2rem 0.2rem #822000;
+}
+
+
 .app-link {
-  color: red;
+  color: #822000;
 }
 
