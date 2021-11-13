@@ -56,6 +56,13 @@ class CreatureContainer extends Component {
   }
 
   render() {
+    /*
+    // the below causes memory leak error...need to unMount to use?
+    if (this.state.hasError || this.state.creaturesByCR.length === 0) {
+      return <Redirect to='/Error' />
+    }
+  */
+
     if (this.state.hasError) {
       return <Redirect to='/Error' />
     }
