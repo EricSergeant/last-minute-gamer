@@ -5,7 +5,8 @@
 }
 
 .app-header {
-  /* background-color: #282c34; */
+  /* background-color: #360000; */
+  /* background-color: #2C4862; */
   background-color: lightgoldenrodyellow;
   min-height: 7vh;
   display: flex;
@@ -13,18 +14,18 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color:#822000;
+  color: #360000;
 }
 
 h1 {
-  text-shadow: 1px 1px black;
+  text-shadow: 0.5px 0.5px black;
 }
 
 .app-main {
   background: url(castle.jpg); 
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position:center;
   min-height: 93vh;
   display: flex;
   flex-direction: column;
