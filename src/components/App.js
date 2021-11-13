@@ -5,6 +5,7 @@ import CreatureDetail from './CreatureDetail';
 import Main from './Main';
 import NavBar from './NavBar';
 import Error from './Error';
+import Favorites from './Favorites';
 import { Route } from 'react-router-dom';
 
 const App = () => {
@@ -40,6 +41,10 @@ const App = () => {
           )
         }
         }
+        />
+
+        <Route exact path="/favorites" render={() =>
+          <Favorites />}
         />
 
         <Route path='/error' render={() =>
