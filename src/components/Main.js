@@ -5,7 +5,7 @@ const Main = () => {
   return (
     <div className='main-text'>
       <h3>Welcome to the monster finder!</h3>
-      <p>Running late to your D&D game? Need a last-minute encounter for your players?  Please choose a Challenge Rating(CR) from the menu above.</p>
+      <p>Running late to your D&D game? Need a last-minute encounter for your players?  Just feeling lazy? Click on a Challenge Rating(CR) from the menu above to grab a monster.</p>
       <br></br>
       <br></br>
       <h4>What exactly is a CR and how do I use it?</h4>
