@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/NavBar.css';
 import { NavLink } from 'react-router-dom';
-// import { fetchCR } from '../ApiCalls';
 
 const NavBar = () => {
   return (

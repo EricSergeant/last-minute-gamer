@@ -6,7 +6,6 @@ import Main from './Main';
 import NavBar from './NavBar';
 import Error from './Error';
 import { Route } from 'react-router-dom';
-// import { fetchCrFive, fetchCR } from '../ApiCalls.js';
 
 const App = () => {
   return (
