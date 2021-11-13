@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/App.css';
 import CreatureContainer from './CreatureContainer';
+import CreatureDetail from './CreatureDetail';
 import Main from './Main';
 import NavBar from './NavBar';
 import Error from './Error';
@@ -35,7 +36,9 @@ const App = () => {
 
         <Route exact path="/creatures/:Creature/details" render={(detailProps) => {
           console.log('details routeProps', detailProps);
-
+          return (
+            < CreatureDetail creatureDetail={detailProps.match.params.Creature} />
+          )
         }
         }
         />
