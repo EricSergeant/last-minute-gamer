@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import CreatureCard from './CreatureCard';
 import '../styles/CreatureContainer.css';
-import { fetchCR, fetchCrFive } from '../ApiCalls';
+import { fetchCR } from '../ApiCalls';
 
 class CreatureContainer extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class CreatureContainer extends Component {
   }
 
   componentDidMount() {
-    // console.log('component did mount');
+    // console.log('NOTE: component did mount');
     fetchCR(this.props.creatureNumber)
       .then(data => {
         if (data === undefined) {
@@ -33,7 +33,7 @@ class CreatureContainer extends Component {
   }
 
   componentDidUpdate(previousProps) {
-    // console.log('component did update');
+    // console.log('NOTE: component updated');
     // console.log('previous props', previousProps);
     // console.log('this.props', this.props);
     if (this.props.creatureNumber !== previousProps.creatureNumber) {
