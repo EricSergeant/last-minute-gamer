@@ -6,6 +6,19 @@ export const fetchCrFive = () => {
     .then(results => results.json())
 };
 
+export const fetchDetail = (index) => {
+  return fetch(`https://www.dnd5eapi.co/api/monsters/${index}`)
+    .then(response => {
+      if (response.status >= 500) {
+        console.log('fetch error one:\n response status >=500')
+      } else if (!response.ok) {
+        console.log('fetch error two:\n response not ok')
+      } else {
+        return response.json()
+      }
+    })
+};
+
 export const fetchCR = (selection) => {
   return fetch(`https://www.dnd5eapi.co/api/monsters?challenge_rating=${selection}`)
     .then(response => {

@@ -68,6 +68,7 @@ class CreatureContainer extends Component {
           name={creature.name}
           url={creature.url}
           key={creature.index}
+          CR={this.props.creatureNumber}
         />
       );
     })
