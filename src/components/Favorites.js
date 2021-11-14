@@ -3,7 +3,9 @@ import '../styles/Favorites.css';
 
 export const addFavorite = (name, index) => {
   // this.setState.myFavorites.push(name, index)
-  myFavorites.push({ name: name, index: index })
+  if (!myFavorites.includes(name)) {
+    myFavorites.push({ name: name, index: index })
+  }
   console.log('updated favs', myFavorites)
 }
 
