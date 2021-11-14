@@ -93,3 +93,32 @@ button {
   font-weight: bold;
   color:lightgoldenrodyellow;
 }
+
+/*
+@media screen and (max-width: 760px) {
+  .nav {
+   flex-direction: column;
+   width: 10%;
+  min-height: 90vh;
+  align-content: flex-start;
+  margin-right: auto;
+  /* float: left; */
+  /* position: fixed; */
+  /* } */
+/* } */
+
+@media screen and (max-width: 760px) {
+  .nav {
+   flex-wrap: wrap;
+   margin: auto;
+   overflow: hidden;
+   position: relative;
+  }
+  .nav>* {
+    flex: 1 1 10rem;
+  }
+  a {
+    padding: 0.1rem;
+    margin: 0.2rem;
+  }
+}
