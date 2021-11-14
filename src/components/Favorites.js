@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import '../styles/Favorites.css';
 
+export const addFavorite = (name, index) => {
+  // this.setState.myFavorites.push(name, index)
+  myFavorites.push({ name: name, index: index })
+  console.log('updated favs', myFavorites)
+}
+
+const myFavorites = [
+  {
+    name: "Clay Golem",
+    index: "http://localhost:3000/creatures/clay-golem/details"
+  },
+  {
+    name: "Barbed Devil",
+    index: "http://localhost:3000/creatures/barbed-devil/details"
+  }];
 
 class Favorites extends Component {
   constructor(props) {
@@ -17,14 +32,14 @@ class Favorites extends Component {
     }
   }
 
-  addFavorite = (name, index) => {
-    // this.setState.myFavorites.push(name, index)
-    console.log('updated favs', this.state.myFavorites)
-  }
+  // addFavorite = (name, index) => {
+  //   // this.setState.myFavorites.push(name, index)
+  //   console.log('updated favs', this.state.myFavorites)
+  // }
 
   render() {
-    console.log('my favorites', this.state.myFavorites)
-    const favoriteInfo = this.state.myFavorites.map(fav => {
+    // console.log('my favorites', this.state.myFavorites)
+    const favoriteInfo = myFavorites.map(fav => {
       return (
         <div className='favs'>
           {/* <h3>My Favorite Monsters</h3> */}

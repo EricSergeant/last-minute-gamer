@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/CreatureDetail.css';
 import { fetchDetail } from '../ApiCalls';
+import { addFavorite } from './Favorites';
 
 class CreatureDetail extends Component {
   constructor(props) {
@@ -61,8 +62,7 @@ class CreatureDetail extends Component {
         {/* <p>Movement: {this.state.creatureMove}</p> */}
         <p>XP: {creatureInfo.xp}</p>
         <p>Actions: <br></br>{this.state.creatureActions}</p>
-        <button>Add Favorite</button>
-        <button>Remove Favorite</button>
+        <button className="add-fav-btn" onClick={() => addFavorite(creatureInfo.name, 'test')}>Add Favorite</button>
       </div>
     )
   }
