@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import CreatureCard from './CreatureCard';
 import '../styles/CreatureContainer.css';
-import { fetchCR, fetchCrFive } from '../ApiCalls';
+import { fetchCR } from '../ApiCalls';
 
 class CreatureContainer extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class CreatureContainer extends Component {
   }
 
   componentDidMount() {
-    // console.log('component did mount');
+    // console.log('NOTE: component did mount');
     fetchCR(this.props.creatureNumber)
       .then(data => {
         if (data === undefined) {
@@ -33,7 +33,7 @@ class CreatureContainer extends Component {
   }
 
   componentDidUpdate(previousProps) {
-    // console.log('component did update');
+    // console.log('NOTE: component updated');
     // console.log('previous props', previousProps);
     // console.log('this.props', this.props);
     if (this.props.creatureNumber !== previousProps.creatureNumber) {
@@ -56,6 +56,13 @@ class CreatureContainer extends Component {
   }
 
   render() {
+    /*
+    // the below causes memory leak error...need to unMount to use?
+    if (this.state.hasError || this.state.creaturesByCR.length === 0) {
+      return <Redirect to='/Error' />
+    }
+  */
+
     if (this.state.hasError) {
       return <Redirect to='/Error' />
     }
@@ -68,12 +75,13 @@ class CreatureContainer extends Component {
           name={creature.name}
           url={creature.url}
           key={creature.index}
+          CR={this.props.creatureNumber}
         />
       );
     })
     return (
-      <div className="CreatureContainer">
-        <h3>These are your CR {this.props.creatureNumber} creatures:</h3>
+      <div className="creature-container">
+        <h3>These are your Challenge Rating {this.props.creatureNumber} creatures:</h3>
         {cardInfo}
       </div>
     );

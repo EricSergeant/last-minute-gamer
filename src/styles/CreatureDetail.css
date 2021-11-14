@@ -1,0 +1,36 @@
+/* * {
+  border: 1px solid #822000;
+} */
+
+h3 {
+  color: #822000;
+}
+ p {
+   color: black;
+ }
+
+ .card-display {
+  /* border-top: 2px solid #822000; */
+  border-top: 2px solid #360000;
+ }
+
+.creature-container {
+    background-color:lightgoldenrodyellow;
+    border-bottom: 2px solid #360000;
+    max-width: 70vw;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0 0 0.2rem 0.2rem #360000;
+}
+
+.creature-detail-view {
+  background-color: lightgoldenrodyellow;
+  min-width: 50vw;
+  border-bottom: 2px solid #360000;
+  max-width: 70vw;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0 0 0.2rem 0.2rem #360000;
+}

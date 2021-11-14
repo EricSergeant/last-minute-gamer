@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/NavBar.css';
 import { NavLink } from 'react-router-dom';
-// import { fetchCR } from '../ApiCalls';
 
 const NavBar = () => {
   return (
     <div className="nav">
       <NavLink to='/'>Home</NavLink>
       <NavLink to='/creatures/allCR'>allCRs</NavLink>
+      <NavLink to='/favorites'>Favs</NavLink>
       <NavLink to='/creatures/1'>CR1</NavLink>
       <NavLink to='/creatures/2'>CR2</NavLink>
       <NavLink to='/creatures/3'>CR3</NavLink>
