@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/CreatureDetail.css';
 import { fetchDetail } from '../ApiCalls';
+import { addFavorite } from './Favorites';
 
 class CreatureDetail extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class CreatureDetail extends Component {
       creatureType: '',
       creatureMove: '',
       creatureActions: [],
+      isFav: false,
       hasError: false
     }
   }
@@ -40,10 +42,10 @@ class CreatureDetail extends Component {
 
   render() {
     const creatureInfo = this.state.creatureDetail;
-    const actionsAll = this.state.creatureDetail.actions
-    console.log('creature detail:', this.state.creatureDetail)
-    console.log('type', this.state.creatureType);
-    console.log('actions', actionsAll)
+    // const actionsAll = this.state.creatureDetail.actions
+    // console.log('creature detail:', this.state.creatureDetail)
+    // console.log('type', this.state.creatureType);
+    // console.log('actions', actionsAll)
     // const actionsEach = this.state.creatureDetail.actions.forEach(action => { return action.name })
     // const actionsEach = this.state.creatureDetail.actions[0]
     return (
@@ -60,6 +62,7 @@ class CreatureDetail extends Component {
         {/* <p>Movement: {this.state.creatureMove}</p> */}
         <p>XP: {creatureInfo.xp}</p>
         <p>Actions: <br></br>{this.state.creatureActions}</p>
+        <button className="add-fav-btn" onClick={() => addFavorite(creatureInfo.name, creatureInfo.challenge_rating, `creatures/${creatureInfo.index}/details`)}>Add Favorite</button>
       </div>
     )
   }

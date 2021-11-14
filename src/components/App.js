@@ -27,7 +27,7 @@ const App = () => {
           />
 
           <Route exact path="/creatures/:CR" render={(routeProps) => {
-            console.log('CR routeProps', routeProps);
+            // console.log('CR routeProps', routeProps);
             return (
               < CreatureContainer creatureNumber={routeProps.match.params.CR} />
             )
@@ -36,7 +36,7 @@ const App = () => {
           />
 
           <Route exact path="/creatures/:Creature/details" render={(detailProps) => {
-            console.log('details routeProps', detailProps);
+            // console.log('details routeProps', detailProps);
             return (
               < CreatureDetail creatureDetail={detailProps.match.params.Creature} />
             )

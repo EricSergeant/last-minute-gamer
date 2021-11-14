@@ -66,7 +66,7 @@ class CreatureContainer extends Component {
     if (this.state.hasError) {
       return <Redirect to='/Error' />
     }
-    console.log(this.state.creaturesByCR)
+    // console.log(this.state.creaturesByCR)
     const creatureData = this.state.creaturesByCR;
     const cardInfo = creatureData.map(creature => {
       return (
@@ -81,7 +81,8 @@ class CreatureContainer extends Component {
     })
     return (
       <div className="creature-container">
-        <h3>These are your Challenge Rating {this.props.creatureNumber} creatures:</h3>
+        <h3>These are your Challenge Rating {this.props.creatureNumber} creatures</h3>
+        <h4>Click on creature name for more info</h4>
         {cardInfo}
       </div>
     );

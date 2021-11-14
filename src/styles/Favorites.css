@@ -1,4 +1,13 @@
-.error-text {
+.favs{
+  background-color:lightgoldenrodyellow;
+  border-bottom: 2px solid #822000;
+  max-width: 70vw;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0 0 0.2rem 0.2rem #822000;
+}
+.all-favs {
   background-color:lightgoldenrodyellow;
   border-bottom: 2px solid #822000;
   max-width: 70vw;
@@ -8,12 +17,6 @@
   box-shadow: 0 0 0.2rem 0.2rem #822000;
 }
 
-.error-text > a {
-  border-bottom: 2px solid #822000;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 3rem;
-  box-shadow: 0 0 0.2rem 0.2rem #822000;
-  color: #822000;
-  font-weight: bold;
+.fav-text > a {
+  color:#822000;
 }
