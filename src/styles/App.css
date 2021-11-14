@@ -55,3 +55,9 @@ h1 {
   color: #822000;
 }
 
+@media screen and (max-width: 760px) {
+  .app-main {
+    background: none;
+    background-color: #2C4862;
+  }
+}
