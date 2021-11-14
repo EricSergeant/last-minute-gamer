@@ -81,7 +81,8 @@ class CreatureContainer extends Component {
     })
     return (
       <div className="creature-container">
-        <h3>These are your Challenge Rating {this.props.creatureNumber} creatures:</h3>
+        <h3>These are your Challenge Rating {this.props.creatureNumber} creatures</h3>
+        <h4>Click on creature name for more info</h4>
         {cardInfo}
       </div>
     );

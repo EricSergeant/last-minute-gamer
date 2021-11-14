@@ -11,6 +11,7 @@ class CreatureDetail extends Component {
       creatureType: '',
       creatureMove: '',
       creatureActions: [],
+      isFav: false,
       hasError: false
     }
   }
@@ -60,6 +61,8 @@ class CreatureDetail extends Component {
         {/* <p>Movement: {this.state.creatureMove}</p> */}
         <p>XP: {creatureInfo.xp}</p>
         <p>Actions: <br></br>{this.state.creatureActions}</p>
+        <button>Add Favorite</button>
+        <button>Remove Favorite</button>
       </div>
     )
   }

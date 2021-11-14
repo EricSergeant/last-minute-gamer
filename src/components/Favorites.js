@@ -9,8 +9,17 @@ class Favorites extends Component {
       myFavorites: [{
         name: "Clay Golem",
         index: "http://localhost:3000/creatures/clay-golem/details"
+      },
+      {
+        name: "Barbed Devil",
+        index: "http://localhost:3000/creatures/barbed-devil/details"
       }]
     }
+  }
+
+  addFavorite = (name, index) => {
+    // this.setState.myFavorites.push(name, index)
+    console.log('updated favs', this.state.myFavorites)
   }
 
   render() {
@@ -18,7 +27,7 @@ class Favorites extends Component {
     const favoriteInfo = this.state.myFavorites.map(fav => {
       return (
         <div className='favs'>
-          <h3>My Favorite Monsters</h3>
+          {/* <h3>My Favorite Monsters</h3> */}
           {/* <p>{fav.name}</p> */}
           {/* <p>{fav.index}</p> */}
           <p className="fav-text"><a href={fav.index}> {fav.name} </a></p>
@@ -27,6 +36,7 @@ class Favorites extends Component {
     })
     return (
       <div className='all-favs'>
+        <h3>My Favorite Monsters</h3>
         {favoriteInfo}
       </div>
     )
