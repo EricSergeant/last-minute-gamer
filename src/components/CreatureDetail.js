@@ -62,7 +62,7 @@ class CreatureDetail extends Component {
         {/* <p>Movement: {this.state.creatureMove}</p> */}
         <p>XP: {creatureInfo.xp}</p>
         <p>Actions: <br></br>{this.state.creatureActions}</p>
-        <button className="add-fav-btn" onClick={() => addFavorite(creatureInfo.name, `creatures/${creatureInfo.index}/details`)}>Add Favorite</button>
+        <button className="add-fav-btn" onClick={() => addFavorite(creatureInfo.name, creatureInfo.challenge_rating, `creatures/${creatureInfo.index}/details`)}>Add Favorite</button>
       </div>
     )
   }
