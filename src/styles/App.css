@@ -43,6 +43,11 @@ h1 {
     padding: 2rem;
     margin: 2rem;
     box-shadow: 0 0 0.2rem 0.2rem #822000;
+    color: black;
+}
+
+.main-text > a {
+  color: #822000;
 }
 
 
