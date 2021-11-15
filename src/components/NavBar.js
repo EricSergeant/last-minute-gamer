@@ -6,7 +6,6 @@ const NavBar = () => {
   return (
     <div className="nav">
       <NavLink className='home-nav' to='/'>Home</NavLink>
-      {/* <NavLink to='/creatures/allCR'>allCRs</NavLink> */}
       <NavLink className='fav-nav' id='favorites' to='/favorites'>Favs</NavLink>
       <NavLink className='CR1-nav' to='/creatures/1'>CR1</NavLink>
       <NavLink className='CR2-nav' to='/creatures/2'>CR2</NavLink>
