@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/CreatureCard.css';
 import { Link } from 'react-router-dom';
 
 const CreatureCard = ({ index, name }) => {

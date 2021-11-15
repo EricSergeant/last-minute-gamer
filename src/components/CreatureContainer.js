@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import CreatureCard from './CreatureCard';
-import '../styles/CreatureContainer.css';
 import { fetchCR } from '../ApiCalls';
 
 class CreatureContainer extends Component {
