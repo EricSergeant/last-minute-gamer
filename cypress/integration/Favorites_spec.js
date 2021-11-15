@@ -12,15 +12,8 @@ describe('Favorites should be recorded', () => {
         "armor_class": 14,
         "hit_points": 68,
         "hit_dice": "8d10",
-        "languages": "",
         "challenge_rating": 3,
         "xp": 700,
-        "special_abilities": [
-          {
-            "name": "Tail Spike Regrowth",
-            "desc": "The manticore has twenty-four tail spikes. Used spikes regrow when the manticore finishes a long rest."
-          }
-        ],
         "actions": [
           {
             "name": "Multiattack",
