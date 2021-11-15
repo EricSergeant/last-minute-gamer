@@ -1,8 +1,7 @@
-beforeEach(() => {
-  cy.visit('http://localhost:3000/');
-});
-
-describe.skip('NavBar should correctly route', () => {
+describe('NavBar should correctly route', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/');
+  });
   it('Should navigate to favorites and back to home page', () => {
     cy.get('.fav-nav').click()
     cy.get('.all-favs').contains('My Favorite Monsters')
