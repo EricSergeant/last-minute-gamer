@@ -49,5 +49,14 @@ h3, h4 {
 button:hover {
   transform: scale(1.2);
   font-weight: bold;
+  font-size: large;
   color:#822000;
 } 
+
+/* .add-fav-btn:before{
+  display: none;
+}
+.add-fav-btn:after span{
+  content: '...done!';
+} */
+
