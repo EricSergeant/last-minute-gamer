@@ -19,7 +19,7 @@ Are you running a Dungeons & Dragons game and don't have a creature for your pla
 `` "This project will challenge you to use the technology you’ve become familiar with over the course of Mod 3, as well as force you to work inside some constraints...this project, having a short time frame, will need to pack a lot into a small space." ``
 
 ## Deployed Application
-NEED TO UPDATE: Visit the deployed application [HERE]() 
+Visit the deployed application here: [lateDM.surge.sh](https://latedm.surge.sh/) 
 
 ## Technologies
   - React
