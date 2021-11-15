@@ -12,13 +12,10 @@ describe('App should load main page', () => {
   });
   it('Should display the NavBar', () => {
     const navs = ['Home', 'Fav', 'CR1', 'CR2', 'CR3', 'CR4', 'CR5', 'CR6', 'CR7', 'CR8', 'CR9', 'CR10',]
-    // cy.contains('CR1')
     navs.forEach(link => {
       cy.contains(link)
     })
-    // cy.get('.nav').contains('[id=test]')
   });
-
 
 })
 
