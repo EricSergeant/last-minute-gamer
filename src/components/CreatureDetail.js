@@ -12,7 +12,7 @@ class CreatureDetail extends Component {
       creatureType: '',
       creatureMove: '',
       creatureActions: [],
-      isFav: false,
+      // isFav: false,
       hasError: false
     }
   }
@@ -43,7 +43,7 @@ class CreatureDetail extends Component {
   render() {
     const creatureInfo = this.state.creatureDetail;
     // const actionsAll = this.state.creatureDetail.actions
-    // console.log('creature detail:', this.state.creatureDetail)
+    console.log('creature detail:', this.state.creatureDetail)
     // console.log('type', this.state.creatureType);
     // console.log('actions', actionsAll)
     // const actionsEach = this.state.creatureDetail.actions.forEach(action => { return action.name })

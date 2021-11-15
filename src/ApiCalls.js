@@ -12,8 +12,11 @@ export const fetchDetail = (index) => {
     .then(response => {
       if (response.status >= 500) {
         console.log('fetch error one:\n response status >=500')
+      } else if (response.state >= 400) {
+        console.log('fetch error two:\n status >=400')
+        return <Redirect to='/Error' />
       } else if (!response.ok) {
-        console.log('fetch error two:\n response not ok')
+        console.log('fetch error three:\n response not ok')
         return <Redirect to='/Error' />
       } else {
         return response.json()
@@ -26,8 +29,12 @@ export const fetchCR = (selection) => {
     .then(response => {
       if (response.status >= 500) {
         console.log('fetch error one:\n response status >=500')
+      } else if (response.state >= 400) {
+        console.log('fetch error two:\n status >=400')
+        return <Redirect to='/Error' />
       } else if (!response.ok) {
-        console.log('fetch error two:\n response not ok')
+        console.log('fetch error three:\n response not ok')
+        return <Redirect to='/Error' />
       } else {
         return response.json()
       }
