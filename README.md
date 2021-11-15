@@ -31,7 +31,13 @@ Visit the deployed application here: [lateDM.surge.sh](https://latedm.surge.sh/)
   - VSCode 
 
 ## Illustrations
-NEED TO UPDATE WITH GIFs:![Application Preview]()
+Fullscreen:
+
+![Fullscreen Preview](https://media.giphy.com/media/9Whp2ULIuQTH2gS0oq/giphy.gif)
+
+Mobile view:
+
+![Mobile Preview](https://media.giphy.com/media/XpitzXLxS7iARaLcYh/giphy.gif)
 
 ## Code Architecture
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
