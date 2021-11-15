@@ -48,9 +48,9 @@ const App = () => {
             <Favorites />}
           />
 
-          <Route path='/error' render={() =>
+          {/* <Route path='/error' render={() =>
             <Error />}
-          />
+          /> */}
 
           <Route component={Error} />
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dropdown, DropdownMenu, DropdownItem } from 'react';
 import '../styles/NavBar.css';
 import { NavLink } from 'react-router-dom';
 
