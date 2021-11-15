@@ -2,7 +2,7 @@ beforeEach(() => {
   cy.visit('http://localhost:3000/');
 });
 
-describe('NavBar should correctly route', () => {
+describe.skip('NavBar should correctly route', () => {
   it('Should navigate to favorites and back to home page', () => {
     cy.get('.fav-nav').click()
     cy.get('.all-favs').contains('My Favorite Monsters')
@@ -79,6 +79,5 @@ describe('NavBar should correctly route', () => {
       expect(loc.href).to.eq('http://localhost:3000/creatures/10')
     })
   });
-
 
 })
