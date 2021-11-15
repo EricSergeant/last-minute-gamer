@@ -9,7 +9,6 @@ export const addFavorite = (nameP, challenge_rating, indexP) => {
   if (!myFavorites.find(creature => creature.name.includes(nameP))) {
     myFavorites.push({ name: nameP, index: indexP, CR: challenge_rating, key: indexP })
   }
-  // console.log('updated favs', myFavorites)
 }
 
 const Favorites = () => {

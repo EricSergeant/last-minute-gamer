@@ -1,7 +1,3 @@
-/* * {
-  border: 1px solid #822000;
-} */
-
 h3, h4 {
   color: #822000;
 }
@@ -10,7 +6,6 @@ h3, h4 {
  }
 
  .card-display {
-  /* border-top: 2px solid #822000; */
   border-top: 2px solid #360000;
  }
 
@@ -52,11 +47,4 @@ button:hover {
   font-size: large;
   color:#822000;
 } 
-
-/* .add-fav-btn:before{
-  display: none;
-}
-.add-fav-btn:after span{
-  content: '...done!';
-} */
 

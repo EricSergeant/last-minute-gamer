@@ -17,7 +17,6 @@ const App = () => {
         <NavBar />
       </header>
       <main className="app-main">
-        {/* {this.state.hasError && <h2>This was an error summoning a creature from the server, please try again.</h2>} */}
         <Switch>
           <Route exact path="/" render={() =>
             <div>
@@ -27,7 +26,6 @@ const App = () => {
           />
 
           <Route exact path="/creatures/:CR" render={(routeProps) => {
-            // console.log('CR routeProps', routeProps);
             return (
               < CreatureContainer creatureNumber={routeProps.match.params.CR} />
             )
@@ -36,7 +34,6 @@ const App = () => {
           />
 
           <Route exact path="/creatures/:Creature/details" render={(detailProps) => {
-            // console.log('details routeProps', detailProps);
             return (
               < CreatureDetail creatureDetail={detailProps.match.params.Creature} />
             )
@@ -48,18 +45,7 @@ const App = () => {
             <Favorites />}
           />
 
-          {/* <Route path='/error' render={() =>
-            <Error />}
-          /> */}
-
           <Route component={Error} />
-
-
-          {/* 
-          The code below works but flashes error on each page load:
-          <Route path="*" render={() =>
-            <Error />}
-          /> */}
 
         </Switch>
       </main>
